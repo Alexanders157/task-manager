@@ -63,7 +63,7 @@ class TaskController extends Controller
         $task->title = $request->input('title');
         $task->description = $request->input('description');
         $task->save();
-        return redirect()->route('tasks.index');
+        return redirect()->route('index');
     }
 
     /**
@@ -72,6 +72,6 @@ class TaskController extends Controller
     public function destroy($id)
     {
         Task::find($id)->delete();
-        return redirect()->route('tasks.index');
+        return redirect()->route('index');
     }
 }

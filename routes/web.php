@@ -18,7 +18,7 @@ Route::get('/', function () {
 
 Route::get('/tasks', [TaskController::class, 'index'])->name('index');
 Route::get('/tasks/create', [TaskController::class, 'create'])->name('create');
-Route::post('/tasks', [TaskController::class, 'store'])->name('tasks.store');
+Route::post('/tasks', [TaskController::class, 'store'])->name('store');
 Route::get('/tasks/{id}', [TaskController::class, 'show'])->name('show');
 Route::get('/tasks/{id}/edit', [TaskController::class, 'edit'])->name('edit');
 Route::patch('/tasks/{id}', [TaskController::class, 'update'])->name('update');

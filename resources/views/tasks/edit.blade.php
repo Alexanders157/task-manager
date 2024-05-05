@@ -1,8 +1,12 @@
-{{-- @extends('layouts.app') --}}
+@extends('layouts.app')
+
+@section('title', 'Edit')
+
+@section('content')
 
 @section('content')
     <h1>Edit Task</h1>
-    <form action="{{ route('tasks.update', $task->id) }}" method="post">
+    <form action="{{ route('update', $task->id) }}" method="post">
         @csrf
         @method('PATCH')
         <label for="title">Title:</label>

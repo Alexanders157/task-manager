@@ -4,7 +4,7 @@
 
 @section('content')
     <h1>Create Task</h1>
-    <form action="{{ route('tasks.store') }}" method="post">
+    <form action="{{ route('store') }}" method="post">
         @csrf
         <label for="title">Title:</label>
         <input type="text" name="title" required>
